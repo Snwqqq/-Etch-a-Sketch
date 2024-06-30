@@ -14,7 +14,7 @@ gridHolder.addEventListener("mouseover",(event)=>{
 
 gridResize.addEventListener('click', ()=>{
     let newGridSize = parseInt(window.prompt("What new grid size (MAX 100)","100"));
-    if (newGridSize>100||newGridSize!='number'){
+    if (newGridSize>100||isNaN(!newGridSize)){
         newGridSize=100;
     }
     gridSize = newGridSize;
