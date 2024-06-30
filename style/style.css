@@ -10,9 +10,14 @@ body {
 }
 
 .grid-holder{
-    height: 920px;
-    width: 920px;
+    height: 80vh;
+    width: 80vh;
     background-color: white;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: start;
+    gap:0;
+
 }
 .button-holder{
     gap: 50px;
@@ -25,4 +30,9 @@ body {
 button{
     font-size: 40px;
     padding: 10px 20px;
+}
+
+.grid-cell{
+ background-color: black;
+ flex:1;
 }
