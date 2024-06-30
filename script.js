@@ -1,7 +1,7 @@
 const gridHolder = document.querySelector('.grid-holder');
-const gridSize = 16;
+let gridSize = 16;
 const resetGridBut = document.querySelector('.grid-reset');
-let currentGridSize =0;
+const gridResize = document.querySelector('.grid-resize');
 let cellGridSize;
 
 createGrid();
@@ -10,6 +10,16 @@ gridHolder.addEventListener("mouseover",(event)=>{
     let target = event.target;
     let div = target;
     div.style.backgroundColor = 'white';
+})
+
+gridResize.addEventListener('click', ()=>{
+    let newGridSize = parseInt(window.prompt("What new grid size (MAX 100)","100"));
+    if (newGridSize>100||newGridSize!='number'){
+        newGridSize=100;
+    }
+    gridSize = newGridSize;
+    deleteGrid(gridHolder);
+    createGrid();
 })
 
 
@@ -28,9 +38,6 @@ function deleteGrid(element){
 
 function createGrid(){
     for(let i = 0;i<gridSize*gridSize;i++){
-        if(gridSize!==currentGridSize){
-         currentGridSize=gridSize;
-        }
         let div = document.createElement('div');
         div.classList.add('grid-cell');
         div.id=i;
