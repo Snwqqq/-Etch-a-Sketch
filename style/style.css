@@ -1,0 +1,28 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: violet;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.grid-holder{
+    height: 920px;
+    width: 920px;
+    background-color: white;
+}
+.button-holder{
+    gap: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+}
+
+button{
+    font-size: 40px;
+    padding: 10px 20px;
+}
